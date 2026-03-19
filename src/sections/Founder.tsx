@@ -4,7 +4,7 @@ const Founder = () => {
   return (
     <div className="bg-white h-auto w-full">
       <section className=" h-screen w-full flex items-center justify-center px-4 bg-white  ">
-        <h2 className="text-center text-5xl text-black  uppercase font-play font-bold tracking-tight sm:text-6xl lg:text-7xl">
+        <h2 className="text-center text-5xl text-black  uppercase font-play font-bold tracking-tight sm:text-9xl lg:text-9xl">
           Meet the Founder
         </h2>
       </section>

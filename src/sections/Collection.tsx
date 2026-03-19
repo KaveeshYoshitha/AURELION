@@ -34,7 +34,7 @@ const Collection = () => {
   return (
     <>
       <section className=" h-screen w-full flex items-center justify-center px-4  ">
-        <h2 className="text-center text-5xl uppercase font-play font-bold tracking-tight sm:text-6xl lg:text-7xl">
+        <h2 className="text-center text-5xl uppercase font-play font-bold tracking-tight sm:text-9xl lg:text-9xl">
           Our Collection
         </h2>
       </section>
