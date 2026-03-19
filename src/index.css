@@ -18,3 +18,8 @@
 body {
   @apply bg-black font-inter text-white;
 }
+
+html,
+body {
+  overflow-x: hidden;
+}

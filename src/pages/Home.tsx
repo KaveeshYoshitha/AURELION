@@ -12,12 +12,16 @@ const Home = () => {
     <>
       <Navbar />
       <Hero />
-      <About />
-      <Collection />
-      <Founder />
-      <Showcase />
-      <CTA />
-      <Footer />
+      <div className="relative">
+        <About />
+        <Collection />
+      </div>
+      <div className="relative z-30">
+        <Founder />
+        <Showcase />
+        <CTA />
+        <Footer />
+      </div>
     </>
   );
 };

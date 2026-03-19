@@ -4,11 +4,18 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
 
+import { useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
 type CollectionItem = {
   image: string;
   name: string;
   description: string;
 };
+
+gsap.registerPlugin(ScrollTrigger);
 
 const collectionItems: CollectionItem[] = [
   {
@@ -31,65 +38,79 @@ const collectionItems: CollectionItem[] = [
 ];
 
 const Collection = () => {
+  const containerRef = useRef<HTMLElement | null>(null);
+
+  useGSAP(
+    () => {
+      const container = containerRef.current;
+      if (!container) return;
+
+      const panels = Array.from(
+        container.querySelectorAll<HTMLElement>(".collection-panel"),
+      );
+      if (panels.length <= 1) return;
+
+      gsap.to(panels, {
+        xPercent: -100 * (panels.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: container,
+          start: "top top",
+          end: () => `+=${window.innerWidth * (panels.length - 1)}`,
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+    },
+    { scope: containerRef },
+  );
+
   return (
     <>
-      <section className=" h-screen w-full flex items-center justify-center px-4  ">
-        <h2 className="text-center text-5xl uppercase font-play font-bold tracking-tight sm:text-9xl lg:text-9xl">
+      <section
+        id="collection"
+        className="sticky top-0 z-20 flex h-screen w-full items-center justify-center bg-black px-4 text-white"
+      >
+        <h2 className="text-center text-5xl font-play font-bold uppercase tracking-tight sm:text-9xl lg:text-9xl">
           Our Collection
         </h2>
       </section>
-      <section className="w-full h-full px-6 py-10 sm:py-28">
-        <div className="mx-auto w-full max-w-full sm:max-w-3/4  h-1/2 max-h-1/2 ">
-          <div className="mt-4 grid grid-cols-1 gap-6 md:gap-48 sm:grid-cols-1 lg:grid-cols-1  ">
-            {collectionItems.map((item) => (
+
+      <section
+        ref={containerRef}
+        className="relative z-20 h-screen w-screen overflow-hidden bg-black"
+      >
+        <div id="horizontal-wrapper" className="flex h-full ">
+          {collectionItems.map((item) => (
+            <div
+              key={item.name}
+              className="collection-panel flex h-screen w-full shrink-0 items-center   justify-center px-6"
+            >
               <Card
-                key={item.name}
-                className="h-full "
-                sx={{
-                  height: "100%",
-                  borderRadius: 3,
-                }}
+                className="h-10/12 w-2/3 flex items-center justify-center"
+                sx={{ width: "70vw", borderRadius: 15 }}
               >
-                <CardActionArea
-                  sx={{
-                    height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
+                <CardActionArea>
                   <CardMedia
                     component="img"
                     image={item.image}
                     alt={`${item.name} watch`}
-                    sx={{
-                      width: "100%",
-                      height: { xs: 220, sm: 500 },
-                      objectFit: "contain",
-                      padding: 3,
-                    }}
+                    sx={{ height: { xs: 280, sm: 420 }, objectFit: "contain" }}
                   />
-
-                  <CardContent sx={{ flexGrow: 1, textAlign: "center" }}>
-                    <Typography gutterBottom variant="h3" component="div">
-                      <span className="font-play">{item.name}</span>
+                  <CardContent sx={{ textAlign: "center" }}>
+                    <Typography gutterBottom variant="h2">
+                      <span className="font-play font-bold text-[#C39E6F] ">
+                        {item.name}
+                      </span>
                     </Typography>
-
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: "text.secondary",
-                        textAlign: "center",
-                        marginBottom: 4,
-                      }}
-                    >
-                      <span className="font-inter">{item.description}</span>
-                    </Typography>
+                    <Typography variant="body1">{item.description}</Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
     </>
