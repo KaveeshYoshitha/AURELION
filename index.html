@@ -2,11 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/webp" href="./public/logo/aurelionLogo.webp" />
+    <link rel="icon" type="image/webp" href="/logo/aurelionLogo.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Play&display=swap");
+
+      #preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+      }
+
+      #preloader img {
+        width: min(240px, 70vw);
+        height: auto;
+      }
+    </style>
+
     <title>AURELION</title>
   </head>
   <body>
+    <div id="preloader" role="status" aria-label="Loading">
+      <img src="/logo/aurelionLogo.webp" alt="Aurelion logo" />
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
