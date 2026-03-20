@@ -121,7 +121,7 @@ const About = () => {
     <section
       ref={rootRef}
       id="about"
-      className="sticky top-0 z-10 w-full h-screen bg-black text-white"
+      className="sticky top-0 z-10 w-full h-screen bg-black text-white overflow-hidden "
     >
       <div className="mx-auto w-full max-w-6xl px-6 py-20 sm:py-28">
         <div className="flex flex-col items-center gap-12 sm:flex-row sm:items-start sm:gap-14">

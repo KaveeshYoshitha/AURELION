@@ -192,7 +192,7 @@ const Showcase = () => {
       </section>
 
       {/* NEXT CONTENT (REVEALED AFTER WHITE EFFECT) */}
-      <div ref={nextRef} className="bg-white">
+      <div ref={nextRef} className="bg-white overflow-hidden">
         <section className="h-screen w-full grid grid-cols-1 sm:grid-cols-2 px-4">
           <div className="flex items-center justify-center">
             <h2 className="text-black text-5xl font-inter font-bold text-center">

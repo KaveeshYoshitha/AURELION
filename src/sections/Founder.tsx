@@ -123,8 +123,8 @@ const Founder = () => {
   );
 
   return (
-    <div ref={scopeRef} className="bg-white w-full">
-      <section className=" h-svh w-full bg-white sm:h-screen sticky top-0  ">
+    <div ref={scopeRef} className="bg-white w-full  ">
+      <section className=" h-svh w-full bg-white sm:h-screen sticky top-0 overflow-hidden ">
         <div className="flex h-svh w-full items-center justify-center bg-white px-4 sm:h-screen">
           <h2 className="text-center text-5xl text-black uppercase font-play font-bold tracking-tight sm:text-9xl lg:text-9xl">
             Meet the Founder
@@ -132,7 +132,7 @@ const Founder = () => {
         </div>
       </section>
 
-      <section className="w-full bg-white">
+      <section className="w-full bg-white overflow-hidden">
         <div
           ref={pinRef}
           className="relative flex h-svh w-full items-center justify-center overflow-hidden bg-white px-4 sm:h-screen sm:px-6"

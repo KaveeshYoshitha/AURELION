@@ -71,7 +71,7 @@ const Collection = () => {
     <>
       <section
         id="collection"
-        className="sticky top-0 z-20 flex h-screen w-full items-center justify-center bg-black px-4 text-white"
+        className="sticky top-0 z-20 flex h-screen w-full items-center justify-center bg-black px-4 text-white overflow-hidden"
       >
         <h2 className="text-center text-5xl font-play font-bold uppercase tracking-tight sm:text-9xl lg:text-9xl">
           Our Collection

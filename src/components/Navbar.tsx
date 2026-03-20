@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar */}
-      <nav className="absolute top-6 left-0 z-20 w-full px-4 md:left-1/2 md:top-8 md:w-auto md:-translate-x-1/2 md:px-0">
+      <nav className="absolute top-6 left-0 z-20 w-full px-4 md:left-1/2 md:top-8 md:w-auto md:-translate-x-1/2 md:px-0 overflow-hidden ">
         {/* Mobile */}
         <div className="relative md:hidden">
           {isOpen && (

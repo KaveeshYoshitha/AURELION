@@ -19,7 +19,7 @@ body {
   @apply bg-black font-inter text-white;
 }
 
-html,
+/* html,
 body {
   overflow-x: hidden;
-}
+} */

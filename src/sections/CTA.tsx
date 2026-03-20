@@ -50,7 +50,7 @@ const CTA = () => {
       {" "}
       <section
         ref={sectionRef}
-        className="w-full h-[70vh] bg-white px-6 py-24 sm:py-28 sticky top-0 "
+        className="w-full h-[70vh] bg-white px-6 py-24 sm:py-28 sticky top-0 overflow-hidden "
       >
         {" "}
         <div className="mx-auto flex w-full max-w-5xl flex-col items-center text-center">
