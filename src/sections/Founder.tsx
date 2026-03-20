@@ -124,7 +124,10 @@ const Founder = () => {
 
   return (
     <div ref={scopeRef} className="bg-white w-full  ">
-      <section className=" h-svh w-full bg-white sm:h-screen sticky top-0 overflow-hidden ">
+      <section
+        className=" h-svh w-full bg-white sm:h-screen sticky top-0 overflow-hidden "
+        id="founder"
+      >
         <div className="flex h-svh w-full items-center justify-center bg-white px-4 sm:h-screen">
           <h2 className="text-center text-5xl text-black uppercase font-play font-bold tracking-tight sm:text-9xl lg:text-9xl">
             Meet the Founder

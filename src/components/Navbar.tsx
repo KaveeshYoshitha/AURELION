@@ -99,10 +99,10 @@ const Navbar = () => {
               </a>
               <a
                 className="rounded-md px-3 py-2 hover:bg-white/10"
-                href="#contact"
+                href="#founder"
                 onClick={() => setIsOpen(false)}
               >
-                Contact
+                Founder
               </a>
             </div>
           </div>
@@ -116,8 +116,8 @@ const Navbar = () => {
           <a className="hover:opacity-80" href="#collection">
             Collection
           </a>
-          <a className="hover:opacity-80" href="#contact">
-            Contact
+          <a className="hover:opacity-80" href="#founder">
+            Founder
           </a>
         </div>
       </nav>
