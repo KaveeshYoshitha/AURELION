@@ -37,7 +37,6 @@ const Showcase = () => {
       (context) => {
         const isMobile = Boolean(context.conditions?.isMobile);
 
-        // Initial states
         gsap.set(sectionRef.current, { backgroundColor: "#000000" });
         gsap.set(textRef.current, {
           autoAlpha: 1,
@@ -60,7 +59,7 @@ const Showcase = () => {
           },
         });
 
-        // Intro: zoom text then end on a full white screen
+        // zoom text then end on a full white screen
         tl.to(
           textRef.current,
           {
@@ -97,7 +96,7 @@ const Showcase = () => {
           tl.kill();
         });
 
-        // Panels: each section slides in (h2 left, img right) and slides out on scroll
+        // Each section slides in (h2 left, img right) and slides out on scroll
         const panels = Array.from(nextRef.current!.querySelectorAll("section"));
 
         panels.forEach((panel) => {
@@ -191,7 +190,7 @@ const Showcase = () => {
         </h2>
       </section>
 
-      {/* NEXT CONTENT (REVEALED AFTER WHITE EFFECT) */}
+      {/* NEXT CONTENT */}
       <div ref={nextRef} className="bg-white overflow-hidden">
         <section className="h-screen w-full grid grid-cols-1 sm:grid-cols-2 px-4">
           <div className="flex items-center justify-center">

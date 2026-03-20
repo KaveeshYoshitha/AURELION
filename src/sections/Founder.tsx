@@ -71,7 +71,7 @@ const Founder = () => {
             },
           });
 
-          // 1) ELIAN VOSS appears large then shrinks to its normal size
+          // ELIAN VOSS text appears large then shrinks to its normal size
           tl.to(
             nameRef.current!,
             {
@@ -81,7 +81,7 @@ const Founder = () => {
             0,
           );
 
-          // 2) Paragraphs come in as one block
+          //  Paragraphs come in as one block
           tl.to(
             copyRef.current!,
             {
@@ -91,7 +91,7 @@ const Founder = () => {
             0.35,
           );
 
-          // 3) Image appears from the bottom (like before)
+          // Image appears from the bottom
           tl.to(
             imageRef.current!,
             {

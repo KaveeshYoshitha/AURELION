@@ -86,7 +86,6 @@ const About = () => {
       });
 
       // 2) When Collection starts, move watch back to Hero.
-      // This avoids sticky-layout edge cases where About's own "leave" isn't reliable.
       ScrollTrigger.create({
         trigger: "#collection",
         start: "top 90%",
