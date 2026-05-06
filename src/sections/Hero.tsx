@@ -129,7 +129,7 @@ const Hero = () => {
 
       {/* Scroll indicator */}
 
-      <div className="hero-scroll pointer-events-none absolute sm:bottom-18 left-1/2 z-20 -translate-x-1/2">
+      <div className="hero-scroll pointer-events-none absolute bottom-8 sm:bottom-18 left-1/2 z-20 -translate-x-1/2">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center pt-2">
           <div className="w-1 h-2 bg-[#C39E6F] rounded-full" />
         </div>

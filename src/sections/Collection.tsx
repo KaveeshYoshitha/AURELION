@@ -90,7 +90,7 @@ const Collection = () => {
             >
               <Card
                 className="h-10/12 w-2/3 flex items-center justify-center"
-                sx={{ width: "70vw", borderRadius: 15 }}
+                sx={{ width: { xs: "85vw", sm: "70vw" }, borderRadius: 15 }}
               >
                 <CardActionArea>
                   <CardMedia

@@ -192,39 +192,39 @@ const Showcase = () => {
 
       {/* NEXT CONTENT */}
       <div ref={nextRef} className="bg-white overflow-hidden">
-        <section className="h-screen w-full grid grid-cols-1 sm:grid-cols-2 px-4">
-          <div className="flex items-center justify-center">
-            <h2 className="text-black text-5xl font-inter font-bold text-center">
+        <section className="h-screen w-full grid grid-cols-1 sm:grid-cols-2 px-4 py-12 sm:py-0">
+          <div className="flex items-center justify-center p-4">
+            <h2 className="text-black text-4xl sm:text-5xl font-inter font-bold text-center">
               Precision Engineering
             </h2>
           </div>
           <div className="flex items-center justify-center">
             <img
               src={PrecisionWatch}
-              className="w-11/12 h-11/12 object-cover"
+              className="w-11/12 max-h-[45vh] sm:max-h-none h-11/12 object-cover rounded-xl"
             />
           </div>
         </section>
 
-        <section className="h-screen w-full grid grid-cols-1 sm:grid-cols-2 px-4">
-          <div className="flex items-center justify-center">
-            <img src={SapphireWatch} className="w-11/12 h-11/12 object-cover" />
+        <section className="h-screen w-full grid grid-cols-1 sm:grid-cols-2 px-4 py-12 sm:py-0">
+          <div className="flex items-center justify-center order-2 sm:order-1">
+            <img src={SapphireWatch} className="w-11/12 max-h-[45vh] sm:max-h-none h-11/12 object-cover rounded-xl" />
           </div>
-          <div className="flex items-center justify-center">
-            <h2 className="text-black text-5xl font-inter font-bold text-center">
+          <div className="flex items-center justify-center order-1 sm:order-2 p-4">
+            <h2 className="text-black text-4xl sm:text-5xl font-inter font-bold text-center">
               Sapphire Glass
             </h2>
           </div>
         </section>
 
-        <section className="h-screen w-full grid grid-cols-1 sm:grid-cols-2 px-4">
-          <div className="flex items-center justify-center">
-            <h2 className="text-black text-5xl font-inter font-bold text-center">
+        <section className="h-screen w-full grid grid-cols-1 sm:grid-cols-2 px-4 py-12 sm:py-0">
+          <div className="flex items-center justify-center p-4">
+            <h2 className="text-black text-4xl sm:text-5xl font-inter font-bold text-center">
               Swiss Movement
             </h2>
           </div>
           <div className="flex items-center justify-center">
-            <img src={SwissWatch} className="w-11/12 h-11/12 object-cover" />
+            <img src={SwissWatch} className="w-11/12 max-h-[45vh] sm:max-h-none h-11/12 object-cover rounded-xl" />
           </div>
         </section>
       </div>

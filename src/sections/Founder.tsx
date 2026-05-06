@@ -32,8 +32,8 @@ const Founder = () => {
 
       mm.add(
         {
-          isMobile: "(max-width: 639px)",
-          isDesktop: "(min-width: 640px)",
+          isMobile: "(max-width: 1023px)",
+          isDesktop: "(min-width: 1024px)",
         },
         (context) => {
           const isMobile = Boolean(context.conditions?.isMobile);
@@ -43,7 +43,7 @@ const Founder = () => {
           });
 
           gsap.set(nameRef.current!, {
-            scale: isMobile ? 1.35 : 1.8,
+            scale: isMobile ? 1.2 : 1.8,
             y: 0,
             transformOrigin: "50% 50%",
           });
@@ -96,7 +96,7 @@ const Founder = () => {
             imageRef.current!,
             {
               autoAlpha: 1,
-              yPercent: isMobile ? 6 : 8,
+              yPercent: isMobile ? 0 : 8,
             },
             0.65,
           );
@@ -142,7 +142,7 @@ const Founder = () => {
         >
           <h2
             ref={nameRef}
-            className="font-play font-bold text-4xl text-black uppercase tracking-widest sm:text-9xl lg:text-9xl z-10"
+            className="font-play font-bold text-[12vw] text-black uppercase tracking-widest sm:text-9xl lg:text-9xl z-10"
           >
             ELIAN VOSS
           </h2>
@@ -164,15 +164,17 @@ const Founder = () => {
             </div>
           </div>
 
-          <img
-            ref={imageRef}
-            src={founder}
-            alt="Elian Voss"
-            onLoad={() => {
-              requestAnimationFrame(() => ScrollTrigger.refresh());
-            }}
-            className="pointer-events-none absolute bottom-0 left-1/2 z-20 w-[112vw] max-w-none -translate-x-1/2 object-contain max-h-[92svh] sm:w-[92vw] sm:max-h-none"
-          />
+          <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none lg:items-end">
+            <img
+              ref={imageRef}
+              src={founder}
+              alt="Elian Voss"
+              onLoad={() => {
+                requestAnimationFrame(() => ScrollTrigger.refresh());
+              }}
+              className="w-full h-[100svh] max-w-none object-cover object-center lg:w-[92vw] lg:h-auto lg:object-contain lg:max-h-[90svh]"
+            />
+          </div>
         </div>
       </section>
     </div>
